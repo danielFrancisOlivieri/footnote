@@ -1,0 +1,61 @@
+
+.footwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.footref {
+  border-radius: 10px;
+  border: 1px solid #848484;
+  color: #848484;
+  padding: 2px 8px;
+  font-size: small;
+  font-family: "BWHaasText-55Roman",Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+.footref:not(.correx)::before {
+  content: "■ ";
+}
+.footref.notabene::before {
+  content: "✱"; 
+}
+.footref:hover {
+  cursor: pointer;
+  color: #2800d7;
+  border: 1px solid #2800d7;
+}
+.footref.correx:not(.notabene):hover {
+  border: 1px solid #f94600;
+  color: #f94600;
+}
+.footref.stick {
+  background: #6381ff;
+  color: #2800d7;
+}
+.footref.correx:not(.notabene).stick {
+  background: rgba(249,70,0,.5);
+  color: rgba(249,70,0,1);
+}
+
+.fn-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-family: "BWHaasText-55Roman",Helvetica, Arial, sans-serif;
+  font-size:0.875em;
+  line-height: 1.3em;
+  width: 300px;
+  padding: 1em;
+  background: white;
+  border: 1px solid black;
+  margin-top: 0.5em;
+  transform: translate(-50%,0);
+  display: none;
+  z-index: 3;
+}
+.fn-popup p {
+  margin: 1em 0 0 0;
+}
+.fn-popup p:first-child {
+  margin: 0;
+}
